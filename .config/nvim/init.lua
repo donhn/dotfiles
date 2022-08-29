@@ -1,0 +1,7 @@
+require('ngdon.options')
+require('ngdon.plugins')
+require('ngdon.colorscheme')
+require('ngdon.cmp')
+require('ngdon.treesitter')
+require('ngdon.keymaps')
+require('ngdon.comment')
