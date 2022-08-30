@@ -44,6 +44,7 @@ return packer.startup(function(use)
 
   use "nvim-lua/plenary.nvim"
   use "kyazdani42/nvim-web-devicons"
+  use 'lewis6991/impatient.nvim'
 
   -- Color Scheme
   use "rebelot/kanagawa.nvim"
@@ -56,6 +57,12 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"    -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
+  -- LSP
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
+  use "jose-elias-alvarez/null-ls.nvim"
+  use "RRethy/vim-illuminate"
 
   -- Snippets
   use "L3MON4D3/LuaSnip"
