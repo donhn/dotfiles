@@ -67,6 +67,9 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- Nvim Tree
+  use "kyazdani42/nvim-tree.lua"
+
   -- Text Editing Helpers
   use "terrortylor/nvim-comment"                        -- Comments
   use 'JoosepAlviste/nvim-ts-context-commentstring'     -- Hover syntax aware comments.
@@ -76,6 +79,9 @@ return packer.startup(function(use)
   -- Telescope
   -- Don't forget to install ripgrep and fd!
   use "nvim-telescope/telescope.nvim"
+
+  -- Gitsigns
+  use 'lewis6991/gitsigns.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
