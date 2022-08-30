@@ -42,8 +42,12 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
 
+  use "nvim-lua/plenary.nvim"
+  use "kyazdani42/nvim-web-devicons"
+
   -- Color Scheme
   use "rebelot/kanagawa.nvim"
+  use "nvim-lualine/lualine.nvim"
 
   -- Cmp Plugins
   use "hrsh7th/nvim-cmp"            -- The completion plugin
@@ -55,14 +59,23 @@ return packer.startup(function(use)
 
   -- Snippets
   use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
 
   -- Treesitter
-  use "nvim-treesitter/nvim-treesitter"
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ':TSUpdate'
+  }
 
-  -- Comments
-  use "terrortylor/nvim-comment"
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  -- Text Editing Helpers
+  use "terrortylor/nvim-comment"                        -- Comments
+  use 'JoosepAlviste/nvim-ts-context-commentstring'     -- Hover syntax aware comments.
+  use "windwp/nvim-autopairs"                           -- Autopair
+  use "lukas-reineke/indent-blankline.nvim"             -- Indentation guides.
 
+  -- Telescope
+  -- Don't forget to install ripgrep and fd!
+  use "nvim-telescope/telescope.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
