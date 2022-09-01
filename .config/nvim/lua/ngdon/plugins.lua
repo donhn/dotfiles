@@ -44,7 +44,8 @@ return packer.startup(function(use)
 
   use "nvim-lua/plenary.nvim"
   use "kyazdani42/nvim-web-devicons"
-  use 'lewis6991/impatient.nvim'
+  use "lewis6991/impatient.nvim"
+  use "folke/which-key.nvim"
 
   -- Color Scheme
   use "rebelot/kanagawa.nvim"
@@ -71,7 +72,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ':TSUpdate'
+    run = ":TSUpdate"
   }
 
   -- Nvim Tree
@@ -79,7 +80,7 @@ return packer.startup(function(use)
 
   -- Text Editing Helpers
   use "terrortylor/nvim-comment"                        -- Comments
-  use 'JoosepAlviste/nvim-ts-context-commentstring'     -- Hover syntax aware comments.
+  use "JoosepAlviste/nvim-ts-context-commentstring"     -- Hover syntax aware comments.
   use "windwp/nvim-autopairs"                           -- Autopair
   use "lukas-reineke/indent-blankline.nvim"             -- Indentation guides.
 
@@ -88,7 +89,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Gitsigns
-  use 'lewis6991/gitsigns.nvim'
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

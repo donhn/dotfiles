@@ -1,3 +1,5 @@
+.DS_*
+
 # Compiled Lua sources
 luac.out
 
