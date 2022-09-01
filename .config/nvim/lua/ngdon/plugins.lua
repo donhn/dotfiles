@@ -50,6 +50,7 @@ return packer.startup(function(use)
   -- Color Scheme
   use "rebelot/kanagawa.nvim"
   use "nvim-lualine/lualine.nvim"
+  use "goolord/alpha-nvim"
 
   -- Cmp Plugins
   use "hrsh7th/nvim-cmp"            -- The completion plugin
@@ -87,6 +88,7 @@ return packer.startup(function(use)
   -- Telescope
   -- Don't forget to install ripgrep and fd!
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
