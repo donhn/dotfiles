@@ -28,4 +28,10 @@ M.general_custom = {
   },
 }
 
+M.telescope = {
+  n = {
+    ["<leader>gg"] = {"<cmd>lua require('telescope').extensions.lazygit.lazygit()<CR>>", "Lazygit"}
+  }
+}
+
 return M

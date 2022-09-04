@@ -20,5 +20,11 @@ local plugins = {
       require "custom.plugins.lsp.null_ls"
     end
   },
+
+  -- Lazygit
+  ["nvim-telescope/telescope.nvim"] = {
+    cmd = {},
+  },
+  ["kdheepak/lazygit.nvim"] = {},
 }
 return plugins

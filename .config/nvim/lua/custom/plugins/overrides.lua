@@ -12,7 +12,8 @@ M.telescope = function()
           ["<C-k>"] = actions.move_selection_previous,
         }
       }
-    }
+    },
+    extensions_list = {"lazygit", "themes", "terms"},
   }
 end
 
