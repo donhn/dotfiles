@@ -1,14 +1,4 @@
--- lua/custom/mappings
 local M = {}
-
-M.disabled = {
-  n = {
-    ["<C-h>"] = "",
-    ["<C-l>"] = "",
-    ["<C-j>"] = "",
-    ["<C-k"] = "",
-  },
-}
 
 M.general_custom = {
   n = {
@@ -28,12 +18,13 @@ M.general_custom = {
   v = {
     ["<"] = { "<gv", "Indent left" },
     [">"] = { ">gv", "Indent right" },
+    ["x"] = { '"_x', "Blackhole delete" },
   },
 }
 
 M.telescope = {
   n = {
-    ["<leader>gg"] = { ":LazyGit<CR>", "Lazygit" },
+    ["<leader>ca"] = { "<cmd>CodeActionMenu<CR>", "lsp code_action" },
   },
 }
 

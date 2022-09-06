@@ -54,4 +54,3 @@ lightbulb.setup({
         events = {"CursorHold", "CursorHoldI"}
     }
 })
-

@@ -1,32 +1,29 @@
 local plugins = {
-  ["goolord/alpha-nvim"] = {
-         disable = false,
-  },
 
-  -- LSP Stuff
   ["neovim/nvim-lspconfig"] = {
-    config = function()
+    config = function ()
       require "plugins.configs.lspconfig"
-      require "custom.plugins.lsp.lspconfig"
+      require "custom.plugins.configs.lspconfig"
     end,
   },
-  ["jose-elias-alvarez/null-ls.nvim"] = {
+  ["p00f/clangd_extensions.nvim"] = {
     after = "nvim-lspconfig",
+    module = "nvim-lspconfig",
     config = function ()
-      require "custom.plugins.lsp.null_ls"
-    end
+      require "custom.plugins.configs.clangd_extensions"
+    end,
   },
   ["kosayoda/nvim-lightbulb"] = {
-    requires = "antoinemadec/FixCursorHold.nvim",
+    requires = {"antoinemadec/FixCursorHold.nvim"},
     config = function ()
       require "custom.plugins.configs.lightbulb"
-    end
+    end,
   },
-
-  -- Lazygit
-  ["nvim-telescope/telescope.nvim"] = {
-    cmd = nil,
+  ["weilbith/nvim-code-action-menu"] = {
+    cmd = "CodeActionMenu",
   },
   ["kdheepak/lazygit.nvim"] = {},
+
 }
+
 return plugins
