@@ -4,26 +4,28 @@ local plugins = {
   },
 
   -- LSP Stuff
-  ["williamboman/nvim-lsp-installer"] = {},
-
   ["neovim/nvim-lspconfig"] = {
-    -- after = 'nvim-lsp-installer',
     config = function()
-      require "custom.plugins.lsp.lsp_installer"
       require "plugins.configs.lspconfig"
       require "custom.plugins.lsp.lspconfig"
     end,
   },
-
   ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
     config = function ()
       require "custom.plugins.lsp.null_ls"
+    end
+  },
+  ["kosayoda/nvim-lightbulb"] = {
+    requires = "antoinemadec/FixCursorHold.nvim",
+    config = function ()
+      require "custom.plugins.configs.lightbulb"
     end
   },
 
   -- Lazygit
   ["nvim-telescope/telescope.nvim"] = {
-    cmd = {},
+    cmd = nil,
   },
   ["kdheepak/lazygit.nvim"] = {},
 }
