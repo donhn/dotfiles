@@ -13,7 +13,15 @@ M.telescope = function()
         }
       }
     },
-    extensions_list = {"lazygit", "themes", "terms"},
+    extensions = {
+      file_browser = {
+        hijack_netrw = true,
+        mappings = {
+
+        },
+      },
+    },
+    extensions_list = {"lazygit", "themes", "terms", "file_browser"},
   }
 end
 

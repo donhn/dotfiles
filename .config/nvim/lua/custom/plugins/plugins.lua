@@ -6,6 +6,12 @@ local plugins = {
       require "custom.plugins.configs.lspconfig"
     end,
   },
+   ["jose-elias-alvarez/null-ls.nvim"] = {
+      after = "nvim-lspconfig",
+      config = function()
+         require "custom.plugins.configs.null-ls"
+      end,
+  },
   ["p00f/clangd_extensions.nvim"] = {
     after = "nvim-lspconfig",
     module = "nvim-lspconfig",
@@ -22,7 +28,13 @@ local plugins = {
   ["weilbith/nvim-code-action-menu"] = {
     cmd = "CodeActionMenu",
   },
-  ["kdheepak/lazygit.nvim"] = {},
+  ["kdheepak/lazygit.nvim"] = {
+    after = "telescope.nvim"
+  },
+
+  ["nvim-telescope/telescope-file-browser.nvim"] = {
+    after = "telescope.nvim",
+  }
 
 }
 
