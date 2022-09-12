@@ -64,6 +64,7 @@ return {
   },
 
   ["kyazdani42/nvim-tree.lua"] = {
+    cmd = { "NvimTreeFindFileToggle" },
     override_options = {
       view = {
         mappings = {
