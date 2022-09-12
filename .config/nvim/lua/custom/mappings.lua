@@ -12,7 +12,7 @@ M.general_custom = {
     ["<S-h>"] = { ":bprevious<CR>", "Previous buffer" },
     ["x"] = { '"_x', "Blackhole delete" },
 
-    ["<leader>gg"] = { ":LazyGit", "LazyGit"},
+    ["<leader>gg"] = { ":LazyGit", "LazyGit" },
   },
   i = {
     ["<C-r>"] = { "<ESC>ddi", "delete line" },
@@ -27,13 +27,14 @@ M.general_custom = {
 M.telescope = {
   n = {
     ["<leader>ca"] = { "<cmd>CodeActionMenu<CR>", "lsp code_action" },
+    ["<leader>fe"] = { "<cmd>Telescope file_browser initial_mode=normal<CR>", "telescope file browser" },
   },
 }
 
 M.nvimtree = {
   n = {
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "focus nvimtree" },
-  }
+    ["<leader>e"] = { "<cmd> NvimTreeFindFileToggle <CR>", "focus nvimtree" },
+  },
 }
 
 return M
