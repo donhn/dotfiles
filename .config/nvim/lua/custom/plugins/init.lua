@@ -32,6 +32,36 @@ return {
   ["kdheepak/lazygit.nvim"] = {
     after = "telescope.nvim",
   },
+  ["williamboman/mason.nvim"] = {
+    override_options = {
+      ensure_installed = {
+        "black",
+        "eslint-lsp",
+        "flake8",
+        "lua-language-server",
+        "prettier",
+        "stylua",
+        "typescript-language-server",
+      },
+    },
+  },
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = {
+      ensure_installed = {
+        "cpp",
+        "dockerfile",
+        "gdscript",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "python",
+        "typescript",
+        "yaml",
+      },
+    },
+  },
 
   -- Telescope
   ["nvim-telescope/telescope.nvim"] = {
