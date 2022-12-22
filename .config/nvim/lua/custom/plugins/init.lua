@@ -36,10 +36,13 @@ return {
     override_options = {
       ensure_installed = {
         "black",
+        "cmake-language-server",
+        "cmakelang",
         "eslint-lsp",
+        "eslint_d",
         "flake8",
-        "lua-language-server",
         "prettier",
+        "pyright",
         "stylua",
         "typescript-language-server",
       },
