@@ -16,6 +16,7 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 alias p3 python3
+alias cd.. "cd .."
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
