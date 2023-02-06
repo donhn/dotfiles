@@ -95,23 +95,4 @@ return {
   ["nvim-telescope/telescope-file-browser.nvim"] = {
     cmd = "Telescope",
   },
-
-  ["kyazdani42/nvim-tree.lua"] = {
-    cmd = { "NvimTreeFindFileToggle" },
-    override_options = {
-      view = {
-        mappings = {
-          list = {
-            { key = "<ESC>", action = "close" },
-          },
-        },
-        float = {
-          enable = true,
-          open_win_config = {
-            relative = "cursor",
-          },
-        },
-      },
-    },
-  },
 }
