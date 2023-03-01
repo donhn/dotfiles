@@ -33,7 +33,7 @@ M.telescope = {
 
 M.nvimtree = {
   n = {
-    ["<leader>e"] = { "<cmd> NvimTreeFindFileToggle <CR>", "focus nvimtree" },
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "focus nvimtree" },
   },
 }
 
