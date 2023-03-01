@@ -1,27 +1,27 @@
 local plugins = {
 
   ["neovim/nvim-lspconfig"] = {
-    config = function ()
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.plugins.configs.lspconfig"
     end,
   },
-   ["jose-elias-alvarez/null-ls.nvim"] = {
-      after = "nvim-lspconfig",
-      config = function()
-         require "custom.plugins.configs.null-ls"
-      end,
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.null-ls"
+    end,
   },
   ["p00f/clangd_extensions.nvim"] = {
     after = "nvim-lspconfig",
     module = "nvim-lspconfig",
-    config = function ()
+    config = function()
       require "custom.plugins.configs.clangd_extensions"
     end,
   },
   ["kosayoda/nvim-lightbulb"] = {
-    requires = {"antoinemadec/FixCursorHold.nvim"},
-    config = function ()
+    requires = { "antoinemadec/FixCursorHold.nvim" },
+    config = function()
       require "custom.plugins.configs.lightbulb"
     end,
   },
@@ -29,13 +29,30 @@ local plugins = {
     cmd = "CodeActionMenu",
   },
   ["kdheepak/lazygit.nvim"] = {
-    after = "telescope.nvim"
+    after = "telescope.nvim",
   },
 
   ["nvim-telescope/telescope-file-browser.nvim"] = {
     after = "telescope.nvim",
-  }
+  },
 
+  ["cameron-wags/rainbow_csv.nvim"] = {
+    ft = {
+      "csv",
+      "tsv",
+      "csv_semicolon",
+      "csv_whitespace",
+      "csv_pipe",
+      "rfc_csv",
+      "rfc_semicolon",
+    },
+    cmd = {
+      "RainbowDelim",
+      "RainbowDelimSimple",
+      "RainbowDelimQuoted",
+      "RainbowMultiDelim",
+    },
+  },
 }
 
 return plugins
