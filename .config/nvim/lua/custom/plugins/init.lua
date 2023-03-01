@@ -41,6 +41,7 @@ return {
         "eslint-lsp",
         "eslint_d",
         "flake8",
+        "lua-language-server",
         "prettier",
         "pyright",
         "stylua",
