@@ -36,7 +36,7 @@ M.mason = {
     "bash-language-server",
 
     -- c/cpp
-    "clang_format",
+    "clang-format",
   },
 }
 
