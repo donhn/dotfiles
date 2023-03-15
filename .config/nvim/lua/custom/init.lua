@@ -1,19 +1,7 @@
-vim.opt.mouse = ""
-vim.opt.signcolumn = "yes:2"
-vim.g.markdown_fenced_languages = {
-  "ts=typescript"
-}
+-- local autocmd = vim.api.nvim_create_autocmd
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "*.gd",
-  callback = function ()
-    vim.opt_local.expandtab=false
-  end,
-})
-
--- vim.api.nvim_create_autocmd("InsertLeave", {
+-- Auto resize panes when resizing nvim window
+-- autocmd("VimResized", {
 --   pattern = "*",
---   callback = function()
---     vim.cmd[[:update]]
---   end,
+--   command = "tabdo wincmd =",
 -- })
