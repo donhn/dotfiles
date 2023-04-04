@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 # Mason Language Server Requirements
 sudo apt install npm
 sudo apt install python3.10-venv
