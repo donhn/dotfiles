@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = {"bashls","ruff_lsp"}
+local servers = { "bashls", "jedi_language_server"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,5 +13,4 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- 
--- lspconfig.pyrigpt.setup { blabla}
+-- lspconfig.pyright.setup {}

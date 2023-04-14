@@ -20,6 +20,9 @@ local sources = {
     },
   },
 
+  -- b.formatting.ruff,
+  b.diagnostics.ruff,
+
   -- bash
   b.formatting.beautysh,
 

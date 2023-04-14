@@ -29,7 +29,7 @@ M.mason = {
     "black",
     "blackd-client",
     "ruff",
-    "ruff-lsp",
+    "jedi-language-server",
 
     -- bash
     "beautysh",
