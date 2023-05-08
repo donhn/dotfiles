@@ -17,13 +17,19 @@ alias lla "ll -A"
 alias g git
 alias p3 python3
 alias cd.. "cd .."
+alias explorer explorer.exe
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
+# Pyenv
+set -gx PYENV_ROOT ~/.pyenv
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.pyenv/bin $PATH
+
+pyenv init - | source
 
 if type -q exa
   alias ll "exa -l -g --icons"
