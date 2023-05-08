@@ -14,6 +14,7 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+alias clear "clear -x"
 alias g git
 alias p3 python3
 alias cd.. "cd .."
