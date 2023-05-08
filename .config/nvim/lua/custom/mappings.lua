@@ -17,11 +17,18 @@ M.general = {
 
     ["x"] = { '"_x', "blackhole delete" },
 
+    ["gf"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+      "floating diagnostic",
+    },
+
     ["<leader>gg"] = { ":LazyGit<CR>", "LazyGit" },
   },
   i = {
     -- ["<C-r>"] = { "<ESC>ddi", "delete line" },
-    ["<C-v>"] = {"<C-R>+"}
+    ["<C-v>"] = { "<C-R>+" },
   },
   v = {
     ["<"] = { "<gv", "indent left" },
