@@ -12,11 +12,11 @@ sudo apt install unzip
 sudo apt install ripgrep
 
 # Lazygit
-if [ OPERATIONG_SYSTEM == "Darwin" ]; then
+if [ "$OPERATING_SYSTEM" == "Darwin" ]; then
     brew install jesseduffield/lazygit/lazygit
     brew install lazygit
     brew install neovim
-elif [ OPERATIONG_SYSTEM == "Linux" ]; then
+elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     # Lazygit
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
