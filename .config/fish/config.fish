@@ -18,6 +18,7 @@ alias clear "clear -x"
 alias g git
 alias p3 python3
 alias cd.. "cd .."
+alias clear "clear -x"
 alias explorer explorer.exe
 command -qv nvim && alias vim nvim
 
