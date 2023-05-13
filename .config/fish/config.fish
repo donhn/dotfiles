@@ -11,7 +11,7 @@ set -g theme_hostname always
 
 # aliases
 if type -q exa
-  ls "l"
+  ls "exa --icons --group --header --group-directories-first"
 else
   alias ls "ls -p -G"
   alias la "ls -A"
