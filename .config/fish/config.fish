@@ -10,10 +10,14 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias ls "ls -p -G"
-alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
+if type -q exa
+  ls "l"
+else
+  alias ls "ls -p -G"
+  alias la "ls -A"
+  alias ll "ls -l"
+  alias lla "ll -A"
+end
 alias clear "clear -x"
 alias g git
 alias p3 python3
@@ -33,10 +37,6 @@ set -gx PATH ~/.pyenv/bin $PATH
 
 pyenv init - | source
 
-if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
-end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
