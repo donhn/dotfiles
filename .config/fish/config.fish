@@ -12,9 +12,10 @@ set -g theme_hostname always
 # aliases
 if type -q exa
   alias ls "exa --icons --group --header --group-directories-first"
+  alias la "ls -a"
 else
   alias ls "ls -p -G"
-  alias la "ls -A"
+  alias la "ls -a"
   alias ll "ls -l"
   alias lla "ll -A"
 end
@@ -35,8 +36,11 @@ set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.pyenv/bin $PATH
 
-pyenv init - | source
-
+if type -q pyenv
+  pyenv init - | source
+else
+  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
