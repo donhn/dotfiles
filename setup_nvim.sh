@@ -28,6 +28,12 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     chmod u+x nvim.appimage &&
     sudo mv nvim.appimage /usr/local/bin &&
     sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
+    # Exa
+    curl -Lo exa.zip https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+    unzip -d exa exa.zip
+    sudo cp -r exa/bin /usr/local/
+    sudo cp exa/man/* /usr/share/man/man1
+    rm -r exa/ exa.zip
 fi
 
 # NVChad
