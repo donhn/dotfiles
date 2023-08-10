@@ -26,6 +26,7 @@ alias cd.. "cd .."
 alias clear "clear -x"
 alias explorer explorer.exe
 command -qv nvim && alias vim nvim
+alias zz "zellij -l compact"
 
 set -gx EDITOR nvim
 # Pyenv
