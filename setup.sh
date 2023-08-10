@@ -30,10 +30,10 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     sudo mv nvim.appimage /usr/local/bin &&
     sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
     # Zellij
-    curl -Lo zellij.tar.gz https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz 
-    gunzip zellij.tar.gz 
+    curl -Lo zellij.tar.gz https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
+    gunzip zellij.tar.gz
     tar xf zellij.tar
-    cp zellij /usr/local/bin 
+    cp zellij /usr/local/bin
     rm -r zellij*
 fi
 
