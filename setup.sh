@@ -7,6 +7,7 @@ sudo apt install fuse
 # Mason Language Server Requirements
 sudo apt install npm
 sudo apt install python3.10-venv
+sudo apt install python3.8-venv
 sudo apt install unzip
 # Telescope Grep Requirements
 sudo apt install ripgrep
@@ -28,12 +29,12 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     chmod u+x nvim.appimage &&
     sudo mv nvim.appimage /usr/local/bin &&
     sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
-    # Exa
-    curl -Lo exa.zip https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-    unzip -d exa exa.zip
-    sudo cp -r exa/bin /usr/local/
-    sudo cp exa/man/* /usr/share/man/man1
-    rm -r exa/ exa.zip
+    # Zellij
+    curl -Lo zellij.tar.gz https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz 
+    gunzip zellij.tar.gz 
+    tar xf zellij.tar
+    cp zellij /usr/local/bin 
+    rm -r zellij*
 fi
 
 # NVChad
