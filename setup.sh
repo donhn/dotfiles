@@ -6,8 +6,7 @@ OPERATING_SYSTEM=$(uname -s)
 sudo apt install fuse
 # Mason Language Server Requirements
 sudo apt install npm
-sudo apt install python3.10-venv
-sudo apt install python3.8-venv
+sudo apt install python3-venv
 sudo apt install unzip
 # Telescope Grep Requirements
 sudo apt install ripgrep
@@ -35,6 +34,10 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     tar xf zellij.tar
     cp zellij /usr/local/bin
     rm -r zellij*
+    # Exa 
+    EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
+    unzip -d /usr/local/ exa.zip
 fi
 
 # NVChad
