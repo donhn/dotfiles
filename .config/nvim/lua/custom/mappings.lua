@@ -31,6 +31,12 @@ M.general = {
     ["<C-v>"] = { "<C-R>+" },
   },
   v = {
+    ["<leader>fm"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "LSP formatting",
+    },
     ["<"] = { "<gv", "indent left" },
     [">"] = { ">gv", "indent right" },
     ["x"] = { '"_x', "blackhole delete" },

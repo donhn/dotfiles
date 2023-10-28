@@ -25,6 +25,11 @@ local plugins = {
   -- overrde plugin configs
   {
     "nvim-treesitter/nvim-treesitter",
+    config = function(_, opts)
+      dofile(vim.g.base46_cache .. "syntax")
+      require("nvim-treesitter.configs").setup(opts)
+      require "custom.configs.nvim-treesitter"
+    end,
     opts = overrides.treesitter,
   },
 
@@ -79,6 +84,12 @@ local plugins = {
       "RainbowMultiDelim",
     },
   },
+
+  {
+    "xiyaowong/transparent.nvim",
+    lazy=false,
+  }
+
 
   -- To make a plugin not be loaded
   -- {
