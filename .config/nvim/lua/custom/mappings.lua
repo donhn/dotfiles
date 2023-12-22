@@ -5,6 +5,7 @@ M.general = {
   n = {
     ["sv"] = { ":vsplit<CR>", "split viewport vertical" },
     ["ss"] = { ":split<CR>", "split viewport horizontal" },
+    ["sq"] = { ":close<CR>", "close viewport"},
     ["sh"] = { "<C-w>h", "viewport left" },
     ["sl"] = { "<C-w>l", "viewport right" },
     ["sk"] = { "<C-w>k", "viewport up" },
@@ -43,8 +44,11 @@ M.general = {
   },
 }
 
-M.teleescope = {
-  n = {},
+M.leap = {
+  n = {
+    ["<leader>s"] = { "<Plug>(leap-forward-to)", "Leap forward" },
+    ["<leader>S"] = { "<Plug>(leap-backward-to)", "Leap backwards" },
+  },
 }
 
 return M
