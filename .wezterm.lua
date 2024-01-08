@@ -1,8 +1,10 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+
 config.default_domain = 'WSL:Ubuntu'
 -- config.default_prog = { 'powershell' }
+
 
 config.window_decorations = "TITLE | RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
@@ -17,9 +19,9 @@ config.window_background_opacity = .99
 -- }
 config.win32_system_backdrop = "Auto"
 
-config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.font = wezterm.font (
-    'MesloLGS Nerd Font',
+    'MesloLGS NF',
     {
         weight = 'Regular'
     }
