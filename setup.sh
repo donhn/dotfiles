@@ -32,7 +32,7 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     curl -Lo zellij.tar.gz https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
     gunzip zellij.tar.gz
     tar xf zellij.tar
-    cp zellij /usr/local/bin
+    sudo cp zellij /usr/local/bin
     rm -r zellij*
     # Exa 
     EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
