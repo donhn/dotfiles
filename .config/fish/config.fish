@@ -26,6 +26,7 @@ alias explorer explorer.exe
 command -qv nvim && alias vim nvim
 alias zz "zellij -l compact"
 alias zad "zellij -l /home/don/repo/don.nguyen/ad-zellij-layout.kdl"
+alias powershell "pwsh.exe"
 
 
 # ad short alias
@@ -69,8 +70,9 @@ set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.pyenv/bin $PATH
 set -gx PATH ./node_modules/.bin $PATH
+set -gx PATH "/mnt/c/Program Files/PowerShell/7/" $PATH
 
-pyenv init - | source
+# pyenv init - | source
 
 
 if status is-interactive
