@@ -1,0 +1,73 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    } 
+  }
+
+  // tab name="cheats" cwd="~/repo/ops_working/cheats/" {
+  //   pane {
+  //     command "nvim"
+  //     args "OPUP/OPUP.txt"
+  //   }
+  // }
+
+  // tab name="mirror" cwd="~/repo/fsw_mirror/OPUP/" {
+  //   pane {
+  //     command "nvim"
+  //   }
+  // }
+
+  // tab name="cmd_tlm_db" cwd="~/repo/ops_working/MAX_GDS_DATA/FamOpup/OPUP/cmd_tlm_db/" {
+  //   pane {
+  //     command "nvim"
+  //   }
+  // }
+
+  // tab name="dev4" cwd="~" {
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  // }
+
+  // tab name="dev5" cwd="~" {
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  // }
+
+  // tab name="dev6" cwd="~" {
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  //   pane split_direction="vertical" {
+  //     pane size="50%"
+  //     pane size="50%"
+  //   }
+  // }
+
+  // tab name="flatsat" cwd="~/" {
+  //   pane split_direction="horizontal"{
+  //   }
+  //   pane
+  // }
+
+  // tab name="scratch" cwd="~/" {
+  //   pane {
+  //     command "nvim"
+  //     args "scratch"
+  //   }
+  // }
+}

@@ -30,15 +30,12 @@ alias powershell "pwsh.exe"
 
 
 # ad short alias
-alias ssh-osim "ssh -XY ad@10.100.10.107"
-alias ssh-simground "ssh ad@10.100.10.101"
 alias ssh-ksat "ssh don.nguyen@ksat-workstation-01.adi.space"
 alias ssh-aws-daytoday "ssh ubuntu@ops-daytoday-01.adi.space"
 alias ssh-workstation-02 "ssh ubuntu@ops-workstation-02.adi.space"
+alias ssh-xcomm-transceiver "ssh ubuntu@xcomm-transceiver-01.adi.space" 
 
 # ad addresses
-set -gx OSIM 10.100.10.107
-set -gx SIMGROUND 10.100.10.101
 set -gx EMOPUP 10.100.10.115
 set -gx DAYTODAYAWS ops-daytoday-01.adi.space
 set -gx WORKSTATION02 ops-workstation-02.adi.space
@@ -46,8 +43,11 @@ set -gx WORKSTATION02 ops-workstation-02.adi.space
 # ad env variables
 set -gx ADWIKI /home/don/repo/wikis
 set -gx OPS /home/don/repo/ops_working
+set -gx DOPS /home/don/repo/dev/ops_working
+set -gx SEQ /home/don/repo/ops_working/fsw_uploads/OPUP/root/MAX/seq/
 set -gx GSREPO /home/don/repo/ground_software
 set -gx AITREPO /home/don/repo/ait
+set -gx OPUP_DOWNLOADS /mnt/ops_share/ops_working/MAX_GDS_DATA/FamOpup/OPUP/archives/files/downloads/
 
 set -gx KEYS_INI /home/don/repo/ait/SUPPORT/keys.ini
 set -gx CMD_TLM_PATH /home/don/repo/ait/SYSTEM/MAX_GDS_DATA
