@@ -24,8 +24,8 @@ alias p3 python3
 alias cd.. "cd .."
 alias explorer explorer.exe
 command -qv nvim && alias vim nvim
-alias zz "zellij -l /home/don/.config/zellij/default-layout.kdl"
-alias zad "zellij -l /home/don/repo/don.nguyen/ad-zellij-layout.kdl"
+alias zz "zellij -l $HOME/.config/zellij/default-layout.kdl"
+alias zad "zellij -l $HOME/repo/don.nguyen/ad-zellij-layout.kdl"
 alias powershell "pwsh.exe -WorkingDirectory 'C:\Users\Don'"
 
 
