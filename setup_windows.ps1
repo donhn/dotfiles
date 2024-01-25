@@ -6,6 +6,8 @@ scoop install main/nodejs
 scoop install main/python
 scoop install main/gcc
 scoop install main/git
+scoop install ninja
+scoop install cmake
 
 scoop bucket add nerd-fonts
 scoop install nerd-fonts/Meslo-NF
