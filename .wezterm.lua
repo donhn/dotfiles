@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 
 config.default_domain = "WSL:Ubuntu"
--- config.default_prog = { 'powershell' }
+-- config.default_prog = { 'pwsh.exe' }
 
 config.window_decorations = "TITLE | RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
@@ -18,7 +18,7 @@ config.window_background_opacity = 0.99
 config.win32_system_backdrop = "Auto"
 
 config.color_scheme = "Gruvbox Dark (Gogh)"
-config.font = wezterm.font("MesloLGS NF", {
+config.font = wezterm.font("MesloLGS Nerd Font", {
 	weight = "Regular",
 })
 config.font_size = 10
