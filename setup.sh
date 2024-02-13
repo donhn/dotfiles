@@ -2,14 +2,17 @@
 
 OPERATING_SYSTEM=$(uname -s)
 
+sudo apt update -y
+sudo apt upgrade -y
+
 # AppImage requirement
-sudo apt install fuse
+sudo apt install fuse -y
 # Mason Language Server Requirements
-sudo apt install npm
-sudo apt install python3-venv
-sudo apt install unzip
+sudo apt install npm -y
+sudo apt install python3-venv -y
+sudo apt install unzip -y
 # Telescope Grep Requirements
-sudo apt install ripgrep
+sudo apt install ripgrep -y
 
 # Lazygit
 if [ "$OPERATING_SYSTEM" == "Darwin" ]; then
