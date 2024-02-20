@@ -1,6 +1,5 @@
 set fish_greeting ""
-
-#set -gx TERM xterm-256color
+set -g fish_key_bindings fish_vi_key_bindings
 
 # theme
 set -g theme_color_scheme terminal-dark
@@ -18,16 +17,21 @@ else
   alias ll "ls -l"
   alias lla "ll -A"
 end
+
+alias explorer explorer.exe
+alias powershell "pwsh.exe -WorkingDirectory 'C:/Users/Don'"
+
+alias cd.. "cd .."
 alias clear "clear -x"
 alias g git
 alias p3 python3
-alias cd.. "cd .."
-alias explorer explorer.exe
-command -qv nvim && alias vim nvim
-alias zz "zellij -l $HOME/.config/zellij/default-layout.kdl"
-alias zad "zellij -l $HOME/repo/don.nguyen/ad-zellij-layout.kdl"
-alias powershell "pwsh.exe -WorkingDirectory 'C:\Users\Don'"
+alias e. "explorer.exe ."
 
+alias zz "zellij -l compact"
+alias zad "zellij -l /home/don/repo/don.nguyen/ad-zellij-layout.kdl"
+
+command -qv nvim && alias vim nvim
+alias oil "nvim -c Oil"
 
 # ad short alias
 alias ssh-ksat "ssh don.nguyen@ksat-workstation-01.adi.space"
@@ -39,6 +43,7 @@ alias ssh-xcomm-transceiver "ssh ubuntu@xcomm-transceiver-01.adi.space"
 set -gx EMOPUP 10.100.10.115
 set -gx DAYTODAYAWS ops-daytoday-01.adi.space
 set -gx WORKSTATION02 ops-workstation-02.adi.space
+set -gx XCOMM01 xcomm-transceiver-01.adi.space
 
 # ad env variables
 set -gx ADWIKI /home/don/repo/wikis
@@ -59,11 +64,11 @@ set -gx MAX_GDS_POSTGRES_DB_HOST engineering-db.adi.space
 set -gx MAX_GDS_POSTGRES_DB_USER gds_client
 set -gx MAX_GDS_POSTGRES_DB_PASSWD gds_client
 
-set -gx PYTHONWARNINGS ignore:Unverified
-
 set -gx EDITOR nvim
+
 # Pyenv
 set -gx PYENV_ROOT ~/.pyenv
+set -gx PYTHONWARNINGS ignore:Unverified
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
@@ -72,9 +77,11 @@ set -gx PATH ~/.pyenv/bin $PATH
 set -gx PATH ./node_modules/.bin $PATH
 set -gx PATH "/mnt/c/Program Files/PowerShell/7/" $PATH
 
-# pyenv init - | source
+pyenv init - | source
 
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+# Alt+v opens the current command in your default editor
