@@ -9,8 +9,8 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-if type -q exa
-  alias ls "exa --icons --group --header --group-directories-first"
+if type -q eza
+  alias ls "eza --icons --group --header --group-directories-first"
 else
   alias ls "ls -p -G"
   alias la "ls -A"

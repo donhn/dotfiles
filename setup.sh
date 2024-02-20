@@ -37,11 +37,10 @@ elif [ "$OPERATING_SYSTEM" == "Linux" ]; then
     tar xf zellij.tar
     sudo cp zellij /usr/local/bin
     rm -r zellij*
-    # Exa 
-    EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-    curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
-    sudo unzip -d /usr/local/ exa.zip
-    rm exa.zip
+    # Exa
+    curl -Lo eza.zip "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.zip"
+    sudo unzip -d /usr/local/bin eza.zip
+    rm eza.zip
     # Meld
     sudo ln -s /mnt/c/Program\ Files/Meld/Meld.exe /usr/local/bin/meld
 fi
